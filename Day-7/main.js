@@ -114,12 +114,10 @@ class Subject {
 class Observer {
 	update(data) {
         try {
-            console.log('update method: ', data);
-            const {0: {title: firstTitle}} = data[0];
+            const {title: firstTitle} = data[0];
+            console.log(firstTitle);
         } catch (err) {
             console.log('We got an error :( :', err);
-        } finally {
-            console.log('Nothing happened');
         }
 		// TODO: Handle the received data. If it's an error message, log it.
 		// If it's the list of posts, destructure and log the title of the first post.
